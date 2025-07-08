@@ -1,0 +1,112 @@
+{% extends 'header.html' %}
+{% load static %}
+{% block content %}
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+   
+</head>
+<body>
+  
+
+    <main>
+        <!--? Hero Start -->
+        <div class="slider-area2">
+            <div class="slider-height2 d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="hero-cap hero-cap2 text-center">
+                                <h2>Blog</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Hero End -->
+        <!--================Blog Area =================-->
+        <section class="blog_area section-padding">
+            <div class="container">
+                <div class="row">
+                    {% for blog in blogs %}
+                    <div class="col-lg-8 mb-5 mb-lg-0">
+                        <div class="blog_left_sidebar">
+                            <article class="blog_item">
+                                <div class="blog_item_img">
+                                    <img class="card-img rounded-0" src="{{ blog.image.url }}" alt="{{ blog.title }}">
+                                    <a href="#" class="blog_item_date">
+                                        <h3>{{blog.title}}</h3>
+                                        <p>{{blog.description}}</p>
+                                    </a>
+                                </div>
+                            </div>
+                    </div>
+                    {% endfor %}
+                                <div class="blog_details">
+                                    
+                                   
+                                   
+                                </div>
+                            </article>
+                            <article class="blog_item">
+                                <div class="blog_item_img">
+                                    <img class="card-img rounded-0" src="assets/img/blog/single_blog_2.png" alt="">
+                                   
+                                </div>
+                                <div class="blog_details">
+                                    <a class="d-inline-block" href="blog_details.html">
+                                    </a>
+                                    
+                                    
+                                </div>
+                            </article>
+                            <article class="blog_item">
+                                <div class="blog_item_img">
+                                    <img class="card-img rounded-0" src="assets/img/blog/single_blog_3.png" alt="">
+                                    
+                                </div>
+                                <div class="blog_details">
+                                    <a class="d-inline-block" href="blog_details.html">
+                                    </a>
+                                   
+                                </div>
+                            </article>
+                            <article class="blog_item">
+                                <div class="blog_item_img">
+                                    <img class="card-img rounded-0" src="assets/img/blog/single_blog_4.png" alt="">
+                                   
+                                </div>
+                                <div class="blog_details">
+                                    <a class="d-inline-block" href="blog_details.html">
+                                    </a>
+                                   
+                                </div>
+                            </article>
+                            <article class="blog_item">
+                                <div class="blog_item_img">
+                                    <img class="card-img rounded-0" src="assets/img/blog/single_blog_5.png" alt="">
+                                   
+                                   
+                                    
+                                </div>
+                            </article>
+                            <nav class="blog-pagination justify-content-center d-flex">
+                                <ul class="pagination">
+                                   
+                                   
+                                    
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                 
+    <!-- Scroll Up -->
+    <div id="back-top" >
+        <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+    </div>
+
+  
+    </body>
+</html>
+{% endblock %}

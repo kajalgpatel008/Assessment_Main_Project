@@ -1,0 +1,28 @@
+{% extends 'header.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Events</title>
+</head>
+<body>
+
+<h2>Upcoming Events</h2>
+
+<div class="event-grid">
+    {% for event in events %}
+    <div class="event-card">
+        <img src="{{ event.image.url }}" alt="{{ event.title }}" style="width:50%; border-radius: 10px;">
+        <h3>{{ event.title }}</h3>
+        <p>{{ event.description|truncatechars:100 }}</p>
+        <p><strong>📍 {{ event.location }}</strong></p>
+        <p><strong>📅 {{ event.date }}</strong> ⏰ {{ event.time }}</p>
+    </div>
+    {% endfor %}
+</div>
+
+</body>
+</html>
+{% endblock %}
+

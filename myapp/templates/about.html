@@ -1,0 +1,186 @@
+{% extends 'header.html' %}
+{% load static %}
+{% block content %}
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+    
+</head>
+<body>
+    
+
+<main>
+    <!--? Hero Start -->
+    <div class="slider-area2">
+        <div class="slider-height2 d-flex align-items-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="hero-cap text-center">
+                            <h2>About Us</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+    <!--? About Law Start-->
+    <section class="about-low-area section-padding2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="about-caption mb-50">
+                        <!-- Section Tittle -->
+                        <div class="section-tittle mb-35">
+                            <h2>The Biggest Digital Conference.</h2>
+                        </div>
+                        <p>Join industry leaders, tech enthusiasts, and digital pioneers at the largest conference focused on digital transformation, innovation, and future-ready technology. Explore insightful talks, cutting-edge solutions, and meaningful networking opportunities.
+</p>
+                        <p>Be part of the most anticipated digital conference of the year! Discover the future of tech with keynote sessions from global leaders, panel discussions, and hands-on virtual workshops — all designed to inspire innovation and growth.
+</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-10">
+                            <div class="single-caption mb-20">
+                                <div class="caption-icon">
+                                    <span class="flaticon-communications-1"></span>
+                                </div>
+                                <div class="caption">
+                                    <h5>Where</h5>
+                                    <p>Ahmedabad, Gujarat, India</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-10">
+                            <div class="single-caption mb-20">
+                                <div class="caption-icon">
+                                    <span class="flaticon-education"></span>
+                                </div>
+                                <div class="caption">
+                                    <h5>When</h5>
+                                    <p>Oct. 15. 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="{% url 'login' %}" class="btn mt-50">Get Your Ticket</a>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <!-- about-img -->
+                    <div class="about-img ">
+                        {% for image in images %}
+                        <div class="about-font-img d-none d-lg-block">
+                            <img src="{{ image.image.url }}" style=" height:300; width:300%;border-radius: 5px;" alt="">
+                       
+                        </div>
+                        {% endfor %}
+                        <div class="about-back-img d-none d-lg-block">
+                            <img src="{% static 'assets/img/gallery/about-back.png' %}" alt="">
+                        
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Law End-->
+    <!-- accordion End -->
+    <!--? gallery Products Start -->
+    <div class="gallery-area fix">
+        <div class="container-fluid p-0">
+            <div class="row no-gutters">
+                {% for image in gallery_images %}
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <div class="gallery-box">
+                        <div class="single-gallery">
+                            <div class="gallery-img " style="background-image: url('{{image.image.url}}'); height:50; width:100% ;border-radius: 5px; background-size:cover;"></div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                
+                
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- gallery Products End -->
+    <!--? Pricing Card Start -->
+    <section class="pricing-card-area section-padding2">
+        <div class="container">
+            <!-- Section Tittle -->
+            <div class="row justify-content-center">
+                <div class="col-lg-5 col-md-8">
+                    <div class="section-tittle text-center mb-100">
+                        <h2>Program Pricing</h2>
+                        <p>Choose the perfect plan that fits your schedule and interest. Whether you're attending for one day or the full conference, we have flexible pricing options designed for every participant.
+</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-10">
+                    <div class="single-card text-center mb-30">
+                        <div class="card-top">
+                            <span>Day - 1</span>
+                            <h4>₹ 450.00</h4>
+                        </div>
+                        <div class="card-bottom">
+                            <ul>
+                                <li>Increase traffic 50%</li>
+                                <li>E-mail support</li>
+                                <li>10 Free Optimization</li>
+                                <li>24/7  support</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-10">
+                    <div class="single-card active text-center mb-30">
+                        <div class="card-top">
+                            <span>Day - 1,2,3</span>
+                            <h4>₹ 800.00</h4>
+                        </div>
+                        <div class="card-bottom">
+                            <ul>
+                                <li>Increase traffic 50%</li>
+                                <li>E-mail support</li>
+                                <li>10 Free Optimization</li>
+                                <li>24/7  support</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-10">
+                    <div class="single-card text-center mb-30">
+                        <div class="card-top">
+                            <span>Day - 1,2</span>
+                            <h4>₹ 600.00</h4>
+                        </div>
+                        <div class="card-bottom">
+                            <ul>
+                                <li>Increase traffic 50%</li>
+                                <li>E-mail support</li>
+                                <li>10 Free Optimization</li>
+                                <li>24/7  support</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Pricing Card End -->
+    </main>
+    
+    <!-- Scroll Up -->
+    <div id="back-top" >
+        <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+    </div>
+
+    
+    
+    </body>
+</html>
+{% endblock%}

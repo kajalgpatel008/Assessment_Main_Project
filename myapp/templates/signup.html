@@ -1,0 +1,110 @@
+{% extends 'header.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   
+  </head>
+  <body>
+  
+  <div class="site-wrap">
+    
+
+    
+      
+    <div class="custom-border-bottom py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 mb-0"><a href="index.html">Home</a><span class="mx-2 mb-0"></span><strong class="text-black">
+            
+          </strong></div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="h3 mb-3 text-black">Sign up</h2>
+          </div>
+          <div class="col-md-12">
+            {% if msg %}
+                <b style="color: blue;">{{ msg }}</b>
+            {% endif %}
+            <form action="{% url 'signup' %}" method="post" enctype="multipart/form-data">
+              {% csrf_token %}
+              <div class="form-group row">
+                  <div class="col-md-12">
+                  
+                  </div>
+                </div>
+              <div class="p-3 p-lg-5 border">
+                <div class="form-group row">
+                  <div class="col-md-6">
+                    <label for="c_fname" class="text-black">First Name <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="c_fname" name="fname">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="c_lname" class="text-black">Last Name <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="c_lname" name="lname">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-md-12">
+                    <label for="c_email" class="text-black">Email <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="c_email" name="email" placeholder="">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-md-12">
+                    <label for="c_email" class="text-black">Mobile <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="c_email" name="mobile" placeholder="">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-md-12">
+                    <label for="c_message" class="text-black">Address </label>
+                    <textarea name="address" id="c_message" cols="30" rows="7" class="form-control"></textarea>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-md-6">
+                    <label for="c_email" class="text-black">Password <span class="text-danger">*</span></label>
+                    <input type="password" class="form-control" id="c_email" name="password"  >
+                  </div>
+                  <div class="col-md-6">
+                    <label for="c_email" class="text-black">Confirm Password <span class="text-danger">*</span></label>
+                    <input type="password" class="form-control" id="c_email" name="cpassword" >
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-md-12">
+                    <label for="c_email" class="text-black">Profile Picture<span class="text-danger">*</span></label>
+                    <input type="file" class="form-control" id="c_email" name="profile_picture" placeholder="">
+                  </div>
+                </div>
+              
+                <div class="form-group row">
+                  <div class="col-lg-3">
+                    <input type="submit" class="btn btn-primary btn-lg btn-block" value="Sign up">
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+           
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
+{% endblock %}
+
